@@ -7,6 +7,16 @@ $(() => {
     // 과제: ids를 'abc'로 serializing 해서 idStr에 할당하라.
     let idStr = ids.toArray().join('')
     console.log(idStr)  //serializing 이다.
+
+    console.log(ids.get())  //static method
+    ids = $.map(ids.get(), (e, i) => e + 1)
+    console.log(ids)
+
+    let arr = $.map({
+        userName: 'adelia',
+        age: 20
+    }, (v, k) => v)
+    console.log(arr)
 })
 </script>
 

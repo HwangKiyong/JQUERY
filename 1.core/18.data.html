@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+$(() => {
+    $('body').data('foo', 10)   //데이터 쓰기
+    $('body').data('bar', {isManual: true})
+    $('body').data({
+        baz: [1, 2],
+        hoi: 'hello'
+    })
+
+    console.log($('body').data('foo'))  //데이터 읽기
+    console.log($('body').data('bar'))
+
+    console.log($('body').data())
+})
+</script>
+
