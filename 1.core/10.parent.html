@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+$(() => {
+    console.log($('.4').parent())   //직계 존속을 찾아낸다.
+
+    console.log($('.4').parents())
+
+    console.log($('.4').parents('div'))
+
+    console.log($('.4').parentsUntil('div.1'))  //parentsUntil 은 미만이다.
+
+    console.log($('.4').closest('div'))  //closest 이상이다. 가장가까운 원소를 포함한다.
+})
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div>
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>

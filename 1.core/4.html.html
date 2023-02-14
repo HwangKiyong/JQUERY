@@ -1,6 +1,21 @@
 <script src='https://code.jquery.com/jquery-3.6.0.js'></script>
 <script>
+$(() => {
+    console.log($('h1').html())
 
+    $('footer').html('<mark>foot</mark>')
+    console.log($('footer').html())
+
+    console.log($('header').find('h1').eq(1)) //header내에서 h1을 찾는다.
+    $('header').find('h1').eq(1).html('<hr>')   //world를 hr로 바꾼것이다.
+
+    $('ul').find('li').eq(2).html('index: 2').end()
+        .eq(3).html('index: 3').end()
+        .eq(4).html('index: 4')
+    
+    // $('h1').text('Hi')  //text를 사용하면 h1을 Hi로 바꾸는것이다.
+    console.log($('h1').text())
+})
 </script>
 
 <header>
