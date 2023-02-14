@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+    $(() => {
+        console.log($('a').attr('href'))
+
+        $('a').attr('href', 'https://www.daum.net/')
+
+        $('a').attr({
+            href: 'https://jquery.com',
+            target: '_blank'
+        })
+
+        $('a').removeAttr('target')     //속성을 제거하는 방법
+    })            
+</script>
+
+<a href='https://www.google.co.kr'>google</a>
+<a href='https://www.naver.com'>naver</a>
+<!--$() ready를 줄인것이다.--> 
+<!--jquery return타입 collection-->
