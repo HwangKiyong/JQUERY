@@ -1,0 +1,11 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+$(() => {
+    $('a').click(e => {
+        e.preventDefault()  //작동을 못하게 막는것이다.
+        $('body').append('<p>prevent default handler.</p>')
+    })
+})  //e 는 event 객체의 줄임말이다.
+</script>
+
+<a href='http://jquery.com'>jquery</a>

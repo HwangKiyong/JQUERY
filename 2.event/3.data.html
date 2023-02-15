@@ -1,0 +1,16 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+$(() => {
+    $('button').click('abel', e => {
+        let userName = $(':text').val()
+        if(userName == e.data) //유저가 읽는 이름이 'abel'이면
+            $('span').text(` valid: ${e.data}`).show().fadeOut(3000)
+        else $('span').text(` invalid: ${userName}`).show()
+    })
+})
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+</form>
