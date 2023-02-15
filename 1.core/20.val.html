@@ -7,9 +7,14 @@ $(() => {
     console.log('|' + text.val() + '|')
 
     text.val(' world ')
-    // 과제: text의 value를, trim해서 text에 저장하라.
-    text = $.trim($(':text').val())
-    console.log(text)
+    // 과제: text객체 의 value를 trim해서, text객체에 저장하라.
+    text.val(text.val().trim()) 
+
+    text.val((i, v) => `hello ${v}`)
+
+    $('input').val(['noon', 'sea', 'banana'])
+    $('#fruit').va('banana')
+    $('#greens').val(['cucumber', 'carrot'])
 })
 </script>
 
@@ -27,7 +32,7 @@ $(() => {
         <option>banana</option>
     </select>
 
-    <select id='greens' multipel>
+    <select id='greens' multiple>
         <option>cucumber</option>
         <option>cabbage</option>
         <option>carrot</option>
