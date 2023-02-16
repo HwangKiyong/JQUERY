@@ -29,12 +29,12 @@ $('li:odd')
     <li></li> --
     <li></li>
     <li></li> --
-</ul
+</ul>
 */
 
 $('div:visible')
 
-$('a[rel$="thinger]')
+$('a[rel$="thinger"]')
 /*
 <a rel='do-nothinger'></a>
 <a rel='so-thinger'></a>
@@ -45,7 +45,7 @@ $('div.foo').has('p')   //자식을 가지고있는것을 찾는것이다.
 <div class='foo'>  --p를 가지고 있는 div element만 return 한다.
     <p></p>
 </div>
-<div class='foo></div> --이건 return하지 않는다.
+<div class='foo'></div> --이건 return하지 않는다.
 */
 
 $('ul li').filter('.current')   //클래스를 가지고있는것을 찾는것이다.
@@ -76,7 +76,7 @@ $('form :button')
 /*
 <form>
     <button></button>
-    <input type='button/>
+    <input type='button'/>
 </form>
 */
 

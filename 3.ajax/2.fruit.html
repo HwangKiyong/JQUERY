@@ -1,0 +1,36 @@
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+$(() => {
+    let table = $('tbody')
+
+    $('button').click(() => {
+        $.ajax({
+            url: '2.data.json',
+            success: (data) => {    //2.data.json이 data에 들어가있다.
+                // 과제: table에 data를 채워라.
+                // table.find('tr').first().find('td').first().text(data.fruits[0].fruitName)
+                for(let i = 0; i < data.fruits.length; i++){
+                    table.find('tr').eq(i).find('td').eq(0).text(data.fruits[i].fruitName).end()
+                    table.find('tr').eq(i).find('td').eq(1).text(data.fruits[i].price).end()
+                    table.find('tr').eq(i).find('td').eq(2).text(data.fruits[i].harvestDate).end()
+                    table.find('tr').eq(i).find('td').eq(3).text(data.fruits[i].origin)
+                }               
+                
+                console.log(data.fruits[0].fruitName)
+            }            
+        })  
+    })
+})
+</script>
+<!-- $('<h3>').text(data.userName).appendTo('body') -->
+<button type='button'>load</button>
+
+<table>
+    <thead>
+        <tr><th>이름</th><th>가격</th><th>기한</th><th>생산자</th></tr>
+    </thead>
+    <tbody>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
